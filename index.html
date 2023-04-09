@@ -43,8 +43,9 @@
         
         function showFlag(result, key) {
             const flagNamevalue = flagName.value
+            const flagCapitalize = flagNamevalue.charAt(0).toUpperCase()+flagNamevalue.slice(1)
            for (const [key,value] of Object.entries(result)) {
-                if(value === flagNamevalue){
+                if(value === flagCapitalize){
                     const img= document.createElement("img")
                     img.src= "https://flagcdn.com/48x36/"+([key][0])+".png"
                     document.querySelector("#results").append(img)        
