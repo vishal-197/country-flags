@@ -42,7 +42,7 @@
         
         
         function showFlag(result, key) {
-            const flagNamevalue = flagName.value
+            const flagNamevalue = flagName.value.toLocaleLowerCase()
             const flagCapitalize = flagNamevalue.charAt(0).toUpperCase()+flagNamevalue.slice(1)
            for (const [key,value] of Object.entries(result)) {
                 if(value === flagCapitalize){
